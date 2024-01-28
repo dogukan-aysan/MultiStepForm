@@ -22,6 +22,7 @@
   --color-light: hsl(206, 94%, 87%);
   --color-strawberry: hsl(354, 84%, 57%);
   --color-cool-gray: hsl(231, 11%, 63%);
+  --color-cool-gray-transparent: hsla(234, 19%, 78%, 0.767);
   --color-light-gray: hsl(229, 24%, 87%);
   --color-magnolia: hsl(217, 100%, 97%);
   --color-alabaster: hsl(231, 100%, 99%);
@@ -58,7 +59,7 @@
 
   /* BOX SHADOW */
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 1rem 5rem rgba(0, 0, 0, 0.04);
+  --shadow-light: 0 1rem 5rem rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -70,6 +71,7 @@ body {
   font-size: var(--fsize-default);
   font-weight: var(--fweight-sm);
   box-sizing: border-box;
+  background-color: var(--color-magnolia);
 }
 
 *,
@@ -81,7 +83,6 @@ body {
 }
 
 #root {
-  background-color: bisque;
   height: 100vh;
   display: flex;
   justify-content: center;

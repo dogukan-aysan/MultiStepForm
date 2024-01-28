@@ -1,0 +1,41 @@
+.step {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-tiny) * 1.8);
+}
+
+.num {
+  height: var(--spacing-sm);
+  width: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--color-alabaster);
+  border-radius: var(--radius-lg);
+  font-size: calc(var(--fsize-sm) * 0.8);
+  font-weight: var(--fweight-lg);
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-marine) !important;
+  background-color: var(--color-light);
+  border: none;
+}
+
+.num,
+.title {
+  color: var(--color-alabaster);
+}
+
+.heading {
+  color: var(--color-cool-gray-transparent);
+  font-size: calc(var(--fsize-tiny) * 1.12);
+  margin-bottom: calc(var(--spacing-tiny) * 0.3);
+}
+
+.title {
+  font-size: calc(var(--fsize-sm) * 1);
+  font-weight: var(--fweight-lg);
+  letter-spacing: 1px;
+}
