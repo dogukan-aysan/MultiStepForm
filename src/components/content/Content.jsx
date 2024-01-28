@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Info from "./Info";
+import Header from "../header/Header";
+import Info from "../info/Info";
 
 function Content() {
   return (

@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "../input/Input";
 
 function Info() {
   return (

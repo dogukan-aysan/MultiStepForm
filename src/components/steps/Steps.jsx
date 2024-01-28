@@ -1,4 +1,4 @@
-import Step from "./Step";
+import Step from "../step/Step";
 
 function Steps() {
   return (

@@ -1,0 +1,16 @@
+.app {
+  background-color: red;
+  width: 144rem;
+  min-height: 50rem;
+  display: flex;
+  gap: 4rem;
+  padding: 4rem;
+}
+
+.app > aside {
+  background-color: yellow;
+}
+
+.app > main {
+  background-color: aqua;
+}
