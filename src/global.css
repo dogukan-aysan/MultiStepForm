@@ -1,11 +1,83 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  /* COLORS */
+  --color-marine: hsl(213, 96%, 18%);
+  --color-purplish: hsl(243, 100%, 62%);
+  --color-pastel: hsl(228, 100%, 84%);
+  --color-light: hsl(206, 94%, 87%);
+  --color-strawberry: hsl(354, 84%, 57%);
+  --color-cool-gray: hsl(231, 11%, 63%);
+  --color-light-gray: hsl(229, 24%, 87%);
+  --color-magnolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* TYPOGRAPHY */
+  --fsize-tiny: 1rem;
+  --fsize-sm: 1.4rem;
+  --fsize-default: 1.6rem;
+  --fsize-md: 1.8rem;
+  --fsize-lg: 2.1rem;
+
+  --fweight-sm: 400;
+  --fweight-md: 500;
+  --fweight-lg: 700;
+
+  /* SPACING */
+  --desktop-width: 144rem;
+  --mobile-width: 37.5rem;
+  --spacing-tiny: 1rem;
+  --spacing-sm: 3rem;
+  --spacing-regular: 5rem;
+  --spacing-md: 10rem;
+  --spacing-lg: 20rem;
+  --spacing-xxl: 35rem;
+  --spacing-huge: 50rem;
+
+  /* BORDER-RADIUS */
+  --radius-tiny: 0.6rem;
+  --radius-sm: 2rem;
+  --radius-md: 5rem;
+  --radius-lg: 10rem;
+  --radius-huge: 50rem;
+
+  /* BOX SHADOW */
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 1rem 5rem rgba(0, 0, 0, 0.04);
 }
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--fsize-default);
+  font-weight: var(--fweight-sm);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 #root {
