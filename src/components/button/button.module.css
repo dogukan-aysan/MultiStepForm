@@ -1,0 +1,6 @@
+.button {
+  padding: var(--spacing-tiny) calc(var(--spacing-tiny) * 1.8);
+  border-radius: var(--radius-tiny);
+  border: none;
+  cursor: pointer;
+}

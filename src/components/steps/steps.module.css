@@ -1,6 +1,6 @@
 .steps {
-  flex-basis: 25%;
-  border-radius: var(--radius-sm);
+  flex-basis: 32%;
+  border-radius: var(--radius-tiny);
   padding: var(--spacing-regular) var(--spacing-sm);
   background-image: url("../../assets/images/bg-sidebar-desktop.svg");
   background-size: cover;

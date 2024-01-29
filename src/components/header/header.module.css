@@ -1,0 +1,12 @@
+.header {
+  margin: calc(var(--spacing-tiny) * 1.7) 0 var(--spacing-sm) 0;
+}
+.heading {
+  font-size: var(--fsize-xlg);
+  color: var(--color-marine);
+  margin-bottom: var(--spacing-tiny);
+}
+
+.text {
+  color: var(--color-cool-gray);
+}

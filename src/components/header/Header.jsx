@@ -1,8 +1,9 @@
+import styles from "./header.module.css";
 function Header() {
   return (
-    <div className="header">
-      <h1 className="heading">Personal Info</h1>
-      <p className="text">
+    <div className={styles.header}>
+      <h1 className={styles.heading}>Personal Info</h1>
+      <p className={styles.text}>
         Please provide your name, email address, and phone number.
       </p>
     </div>

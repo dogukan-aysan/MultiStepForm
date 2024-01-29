@@ -1,8 +1,14 @@
+import styles from "./input.module.css";
+
 function Input({ label, placeholder }) {
   return (
-    <div className="input">
-      <span>{label}</span>
-      <input type="text" placeholder={placeholder} />
+    <div className={styles.container}>
+      <span className={styles.label}>{label}</span>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder={"e.g. " + placeholder}
+      />
     </div>
   );
 }
