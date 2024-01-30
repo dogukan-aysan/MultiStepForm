@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--spacing-tiny) * 1.5);
+  border: solid 1px var(--color-cool-gray-transparent);
+  border-radius: var(--radius-tiny);
+}
+.selected {
+  background-color: var(--color-light-gray-2);
+  border-color: var(--color-purplish);
+}
+.checkbox {
+  width: calc(var(--spacing-sm) * 0.7);
+  height: calc(var(--spacing-sm) * 0.7);
+  border: solid 1px var(--color-light-gray);
+  border-radius: var(--radius-tiny);
+  margin-right: calc(var(--spacing-sm) * 0.8);
+  cursor: pointer;
+}
+.checkbox--selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-purplish);
+  font-size: var(--fsize-tiny);
+}
+.title {
+  font-size: calc(var(--fsize-sm) * 0.9);
+  color: var(--color-marine);
+  font-weight: var(--fweight-lg);
+}
+.text {
+  font-size: calc(var(--fsize-tiny) * 1.1);
+  color: var(--color-cool-gray);
+  margin-top: calc(var(--spacing-tiny) * 0.5);
+}
+.price {
+  margin-left: auto;
+  color: var(--color-purplish);
+  font-weight: var(--fweight-md);
+  font-size: calc(var(--fsize-tiny) * 1.1);
+}

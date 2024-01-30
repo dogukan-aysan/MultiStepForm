@@ -1,0 +1,6 @@
+.addOnList {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-tiny) * 1.5);
+  margin-top: calc(var(--spacing-sm) * 1.3);
+}
