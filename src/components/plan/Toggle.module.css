@@ -1,0 +1,22 @@
+.container {
+  width: calc(var(--spacing-sm) * 1.1);
+  height: calc(var(--spacing-sm) * 0.6);
+  background-color: var(--color-marine);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle {
+  width: calc(var(--spacing-tiny));
+  height: calc(var(--spacing-tiny));
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  margin-left: calc(var(--spacing-tiny) * 0.3);
+  margin-top: 3%;
+}
+
+.left {
+  margin-inline: auto calc(var(--spacing-tiny) * 0.3);
+}

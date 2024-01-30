@@ -2,9 +2,9 @@ import styles from "./header.module.css";
 function Header() {
   return (
     <div className={styles.header}>
-      <h1 className={styles.heading}>Personal Info</h1>
+      <h1 className={styles.heading}>Select your plan</h1>
       <p className={styles.text}>
-        Please provide your name, email address, and phone number.
+        You have the option of monthly or yearly billing.
       </p>
     </div>
   );

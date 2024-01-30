@@ -1,6 +1,7 @@
 .app {
   min-height: calc(var(--spacing-huge) * 1.2);
   width: 65%;
+  max-width: 100rem;
   padding: calc(var(--spacing-tiny) * 1.5);
   display: flex;
   gap: calc(var(--spacing-regular) * 1.5);
@@ -15,4 +16,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-basis: 55%;
 }

@@ -5,7 +5,7 @@ import styles from "./directions.module.css";
 function Directions() {
   return (
     <section className={styles.directions}>
-      {false && (
+      {true && (
         <Button bgColor="hsl(231, 100%, 99%)" textColor="grey">
           Go Back
         </Button>

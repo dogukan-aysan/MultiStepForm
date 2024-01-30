@@ -23,7 +23,8 @@
   --color-strawberry: hsl(354, 84%, 57%);
   --color-cool-gray: hsl(231, 11%, 63%);
   --color-cool-gray-transparent: hsla(234, 19%, 78%, 0.767);
-  --color-light-gray: hsl(229, 24%, 87%);
+  --color-light-gray: hsla(229, 24%, 87%, 0.918);
+  --color-light-gray-2: hsl(228, 24%, 96%);
   --color-magnolia: hsl(217, 100%, 97%);
   --color-alabaster: hsl(231, 100%, 99%);
   --color-white: hsl(0, 0%, 100%);

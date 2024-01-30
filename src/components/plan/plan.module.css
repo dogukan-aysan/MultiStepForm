@@ -1,0 +1,23 @@
+.options {
+  display: flex;
+  gap: var(--spacing-tiny);
+  margin-top: calc(var(--spacing-sm) * 1.5);
+}
+
+.toggleTime {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--spacing-tiny) * 2);
+  padding: calc(var(--spacing-tiny) * 1.5);
+  background-color: var(--color-light-gray-2);
+  border-radius: var(--radius-tiny);
+  font-size: calc(var(--fsize-sm) * 0.9);
+  font-weight: var(--fweight-lg);
+  color: var(--color-cool-gray);
+}
+
+.selected {
+  color: var(--color-marine);
+}

@@ -1,0 +1,28 @@
+.option {
+  padding: var(--spacing-tiny);
+  border: solid 1px var(--color-light-gray);
+  border-radius: var(--radius-tiny);
+  flex-basis: 33%;
+  cursor: pointer;
+}
+
+.active {
+  border-color: var(--color-purplish);
+  background-color: var(--color-magnolia);
+}
+
+.icon {
+  margin-block: var(--spacing-tiny) calc(var(--spacing-sm) * 1.3);
+}
+
+.type {
+  font-size: var(--fsize-default);
+  color: var(--color-marine);
+}
+
+.price {
+  display: inline-block;
+  font-size: var(--fsize-sm);
+  color: var(--color-cool-gray);
+  margin-top: calc(var(--spacing-tiny) * 0.4);
+}
