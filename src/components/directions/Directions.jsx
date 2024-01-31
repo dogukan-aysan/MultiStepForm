@@ -10,8 +10,8 @@ function Directions() {
           Go Back
         </Button>
       )}
-      <Button bgColor="hsl(213, 96%, 18%)" textColor="hsl(217, 100%, 97%)">
-        Next Step
+      <Button bgColor="hsl(243, 100%, 62%)" textColor="hsl(217, 100%, 97%)">
+        Confirm
       </Button>
     </section>
   );

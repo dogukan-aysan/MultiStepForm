@@ -1,7 +1,8 @@
-import AddOnList from "../addOns/AddOnList";
 import Header from "../header/Header";
+import Summary from "../summary/Summary";
 // import Info from "../info/Info";
 // import Plan from "../plan/Plan";
+// import AddOnList from "../addOns/AddOnList";
 
 function Content() {
   return (
@@ -9,7 +10,8 @@ function Content() {
       <Header />
       {/* <Info /> */}
       {/* <Plan /> */}
-      <AddOnList />
+      {/* <AddOnList /> */}
+      <Summary />
     </section>
   );
 }
