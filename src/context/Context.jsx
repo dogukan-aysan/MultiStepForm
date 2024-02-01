@@ -52,6 +52,26 @@ const initialState = {
   ],
   selectedPlan: "Arcade",
   billing: "monthly",
+  addOns: [
+    {
+      title: "Online Service",
+      text: "Access to multiplayer games",
+      price: 1,
+      isSelected: false,
+    },
+    {
+      title: "Larger Storage",
+      text: "Extra 1TB of cloud save",
+      price: 2,
+      isSelected: false,
+    },
+    {
+      title: "Customizable Profile",
+      text: "Custom theme on your profile",
+      price: 2,
+      isSelected: false,
+    },
+  ],
 };
 
 const reducer = (state, action) => {
@@ -65,11 +85,18 @@ const reducer = (state, action) => {
     case "changePlan": {
       return { ...state, selectedPlan: action.payload };
     }
-    case "toggleBilling":
+    case "toggleBilling": {
       return {
         ...state,
         billing: state.billing === "monthly" ? "yearly" : "monthly",
       };
+    }
+    case "toggleAddOn": {
+      return {
+        ...state,
+        addOns: action.payload,
+      };
+    }
   }
 };
 
@@ -77,7 +104,15 @@ const Context = createContext();
 
 const ContextProvider = ({ children }) => {
   const [
-    { steps, currentStep, isCompleted, planOptions, selectedPlan, billing },
+    {
+      steps,
+      currentStep,
+      isCompleted,
+      planOptions,
+      selectedPlan,
+      billing,
+      addOns,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
   return (
@@ -89,6 +124,7 @@ const ContextProvider = ({ children }) => {
         planOptions,
         selectedPlan,
         billing,
+        addOns,
         dispatch,
       }}
     >

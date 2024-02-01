@@ -1,27 +1,25 @@
+import { useContext } from "react";
 import AddOn from "./AddOn";
 import styles from "./addOns.module.css";
+import { Context } from "../../context/Context";
 
 function AddOnList() {
+  const { addOns, billing } = useContext(Context);
   return (
     <div className={styles.addOnList}>
-      <AddOn
-        title="Online Service"
-        text="Access to multiplayer games"
-        price="1"
-        isSelected={true}
-      />
-      <AddOn
-        title="Larger Storage"
-        text="Extra 1TB of cloud save"
-        price="2"
-        isSelected={true}
-      />
-      <AddOn
-        title="Customizable Profile"
-        text="Custom theme on your profile"
-        price="2"
-        isSelected={false}
-      />
+      {addOns.map((option, i) => (
+        <AddOn
+          key={i}
+          title={option.title}
+          text={option.text}
+          price={
+            billing === "monthly"
+              ? `+$${option.price}/mo`
+              : `+$${option.price * 10}/yr`
+          }
+          isSelected={option.isSelected}
+        />
+      ))}
     </div>
   );
 }
