@@ -1,18 +1,15 @@
+import { useContext } from "react";
 import Button from "../button/Button";
 
 import styles from "./directions.module.css";
+import { Context } from "../../context/Context";
 
 function Directions() {
+  const { currentStep } = useContext(Context);
   return (
     <section className={styles.directions}>
-      {true && (
-        <Button bgColor="hsl(231, 100%, 99%)" textColor="grey">
-          Go Back
-        </Button>
-      )}
-      <Button bgColor="hsl(243, 100%, 62%)" textColor="hsl(217, 100%, 97%)">
-        Confirm
-      </Button>
+      {currentStep !== "step1" && <Button>Go Back</Button>}
+      <Button>{currentStep === "step4" ? "Confirm" : "Next Step"}</Button>
     </section>
   );
 }

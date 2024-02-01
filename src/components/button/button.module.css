@@ -4,3 +4,20 @@
   border: none;
   cursor: pointer;
 }
+
+.next-step {
+  background-color: var(--color-marine);
+  color: var(--color-magnolia);
+  margin-left: auto;
+}
+
+.confirm {
+  background-color: var(--color-purplish);
+  color: var(--color-magnolia);
+}
+
+.go-back {
+  background-color: var(--color-alabaster);
+  color: var(--color-cool-gray);
+  font-weight: var(--fweight-md);
+}

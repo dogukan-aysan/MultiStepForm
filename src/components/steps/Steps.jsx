@@ -1,13 +1,20 @@
+import { useContext } from "react";
 import Step from "../step/Step";
 import styles from "./steps.module.css";
+import { Context } from "../../context/Context";
 
 function Steps() {
+  const { steps, currentStep } = useContext(Context);
   return (
     <aside className={styles.steps}>
-      <Step num="1" title="YOUR INFO" isActive={false} />
-      <Step num="2" title="SELECT PLAN" isActive={false} />
-      <Step num="3" title="ADD-ONS" isActive={false} />
-      <Step num="4" title="SUMMARY" isActive={true} />
+      {Object.keys(steps)?.map((step, i) => (
+        <Step
+          key={i}
+          step={steps[step]}
+          num={i + 1}
+          isActive={step === currentStep ? true : false}
+        />
+      ))}
     </aside>
   );
 }

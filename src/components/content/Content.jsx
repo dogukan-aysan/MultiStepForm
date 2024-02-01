@@ -1,17 +1,14 @@
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 import Header from "../header/Header";
-import Summary from "../summary/Summary";
-// import Info from "../info/Info";
-// import Plan from "../plan/Plan";
-// import AddOnList from "../addOns/AddOnList";
 
 function Content() {
+  const { steps, currentStep } = useContext(Context);
+  const { heading, text } = steps[currentStep];
   return (
-    <section className="content">
-      <Header />
-      {/* <Info /> */}
-      {/* <Plan /> */}
-      {/* <AddOnList /> */}
-      <Summary />
+    <section>
+      <Header heading={heading} text={text} />
+      {steps[currentStep].component}
     </section>
   );
 }

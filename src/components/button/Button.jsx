@@ -1,14 +1,30 @@
+import { useContext } from "react";
 import styles from "./button.module.css";
+import { Context } from "../../context/Context";
 
-function Button({ children, bgColor, textColor }) {
-  const style = {
-    backgroundColor: bgColor,
-    color: textColor,
+function Button({ children }) {
+  const { currentStep, dispatch } = useContext(Context);
+  const handleClick = () => {
+    const lastChar = parseInt(currentStep[currentStep.length - 1]);
+    const payload = `step${
+      children === "Next Step" ? lastChar + 1 : lastChar - 1
+    }`;
+    children === "Confirm"
+      ? dispatch({ type: "complete" })
+      : dispatch({ type: "changeStep", payload: payload });
   };
   return (
     <button
-      className={styles.button}
-      style={{ ...style, marginLeft: children === "Next Step" ? "auto" : "0" }}
+      className={`${styles.button} ${
+        styles[
+          children === "Go Back"
+            ? "go-back"
+            : children === "Next Step"
+            ? "next-step"
+            : "confirm"
+        ]
+      }`}
+      onClick={handleClick}
     >
       {children}
     </button>
