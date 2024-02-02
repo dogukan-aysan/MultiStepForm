@@ -72,6 +72,7 @@ const initialState = {
       isSelected: false,
     },
   ],
+  totalPrice: 9,
 };
 
 const reducer = (state, action) => {
@@ -97,6 +98,12 @@ const reducer = (state, action) => {
         addOns: action.payload,
       };
     }
+    case "updatePrice": {
+      return {
+        ...state,
+        totalPrice: action.payload,
+      };
+    }
   }
 };
 
@@ -112,9 +119,11 @@ const ContextProvider = ({ children }) => {
       selectedPlan,
       billing,
       addOns,
+      totalPrice,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
+
   return (
     <Context.Provider
       value={{
@@ -125,6 +134,7 @@ const ContextProvider = ({ children }) => {
         selectedPlan,
         billing,
         addOns,
+        totalPrice,
         dispatch,
       }}
     >
