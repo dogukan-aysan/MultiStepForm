@@ -1,5 +1,0 @@
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing-sm) * 0.8);
-}

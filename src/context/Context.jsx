@@ -2,10 +2,10 @@ import { createContext } from "react";
 
 import { useReducer } from "react";
 
-import Info from "../components/info/Info";
 import Plan from "../components/plan/Plan";
 import AddOnList from "../components/addOns/AddOnList";
 import Summary from "../components/summary/Summary";
+import Form from "../components/form/Form";
 
 const initialState = {
   steps: {
@@ -13,7 +13,7 @@ const initialState = {
       title: "Your info",
       heading: "Personal info",
       text: "Please provide your name, email address, and phone number.",
-      component: <Info />,
+      component: <Form />,
     },
     step2: {
       title: "Select Plan",

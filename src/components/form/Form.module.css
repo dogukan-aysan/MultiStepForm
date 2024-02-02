@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-sm) * 0.8);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-tiny) * 0.7);
+}
+
+.input {
+  padding: calc(var(--spacing-tiny) * 1.2);
+  border: solid 1px var(--color-cool-gray-transparent);
+  border-radius: var(--radius-tiny);
+  outline: none;
+  font-size: var(--fsize-sm);
+  font-weight: var(--fweight-md);
+}
+
+.label {
+  font-size: calc(var(--fsize-sm) * 0.9);
+  color: var(--color-marine);
+  font-weight: var(--fweight-md);
+}
