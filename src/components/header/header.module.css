@@ -9,4 +9,5 @@
 
 .text {
   color: var(--color-cool-gray);
+  font-size: var(--fsize-sm);
 }

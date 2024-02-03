@@ -11,25 +11,25 @@ import { validateEmail, validatePhone } from "../utils/validate";
 const initialState = {
   steps: {
     step1: {
-      title: "Your info",
+      title: "YOUR INFO",
       heading: "Personal info",
       text: "Please provide your name, email address, and phone number.",
       component: <Form />,
     },
     step2: {
-      title: "Select Plan",
+      title: "SELECT PLAN",
       heading: "Select your plan",
       text: "You have the option of monthly or yearly billing.",
       component: <Plan />,
     },
     step3: {
-      title: "Add-ons",
+      title: "ADD-ONS",
       heading: "Pick add-ons",
       text: "Add-ons help enhance your gaming experience.",
       component: <AddOnList />,
     },
     step4: {
-      title: "Summary",
+      title: "SUMMARY",
       heading: "Finishing up",
       text: "Double-check everything looks OK before confirming.",
       component: <Summary />,

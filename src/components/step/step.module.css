@@ -32,10 +32,11 @@
   color: var(--color-cool-gray-transparent);
   font-size: calc(var(--fsize-tiny) * 1.12);
   margin-bottom: calc(var(--spacing-tiny) * 0.3);
+  font-weight: var(--fweight-md);
 }
 
 .title {
-  font-size: calc(var(--fsize-sm) * 1);
+  font-size: var(--fsize-sm);
   font-weight: var(--fweight-lg);
   letter-spacing: 1px;
 }

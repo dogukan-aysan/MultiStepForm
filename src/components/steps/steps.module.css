@@ -1,5 +1,5 @@
 .steps {
-  flex-basis: 32%;
+  flex-basis: 27rem;
   border-radius: var(--radius-tiny);
   padding: var(--spacing-regular) var(--spacing-sm);
   background-image: url("../../assets/images/bg-sidebar-desktop.svg");
