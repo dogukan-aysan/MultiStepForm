@@ -16,10 +16,8 @@ function Option({ type, price, isActive }) {
         src={`/src/assets/images/icon-${type.toLowerCase()}.svg`}
       />
       <h3 className={styles.type}>{type}</h3>
-      <span className={styles.price}>{price}</span>
-      {billing === "yearly" && (
-        <span className={styles.free}>2 months free</span>
-      )}
+      <p className={styles.price}>{price}</p>
+      {billing === "yearly" && <p className={styles.free}>2 months free</p>}
     </div>
   );
 }

@@ -21,14 +21,15 @@
 }
 
 .price {
-  display: inline-block;
+  display: block;
   font-size: var(--fsize-sm);
   color: var(--color-cool-gray);
   margin-top: calc(var(--spacing-tiny) * 0.4);
 }
 
 .free {
-  display: inline-block;
+  display: block;
   font-size: calc(var(--fsize-sm) * 0.8);
   color: var(--color-marine);
+  margin-top: calc(var(--spacing-tiny) * 0.7);
 }
