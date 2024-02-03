@@ -3,12 +3,16 @@ import styles from "./step.module.css";
 import { Context } from "../../context/Context";
 
 function Step({ num, step, isActive }) {
-  const { dispatch } = useContext(Context);
+  const { dispatch, areInputsValid, isCompleted } = useContext(Context);
+  const handleClick = () => {
+    if (areInputsValid && !isCompleted)
+      dispatch({ type: "changeStep", payload: `step${num}` });
+  };
   return (
     <div className={styles.step}>
       <span
         className={`${styles.num} ${isActive ? styles.active : ""}`}
-        onClick={() => dispatch({ type: "changeStep", payload: `step${num}` })}
+        onClick={handleClick}
       >
         {num}
       </span>

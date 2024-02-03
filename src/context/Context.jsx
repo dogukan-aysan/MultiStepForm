@@ -6,6 +6,7 @@ import Plan from "../components/plan/Plan";
 import AddOnList from "../components/addOns/AddOnList";
 import Summary from "../components/summary/Summary";
 import Form from "../components/form/Form";
+import { validateEmail, validatePhone } from "../utils/validate";
 
 const initialState = {
   steps: {
@@ -73,6 +74,13 @@ const initialState = {
     },
   ],
   totalPrice: 9,
+  areInputsValid: false,
+  name: "",
+  email: "",
+  phone: "",
+  mailError: "",
+  phoneError: "",
+  nameError: "",
 };
 
 const reducer = (state, action) => {
@@ -104,6 +112,45 @@ const reducer = (state, action) => {
         totalPrice: action.payload,
       };
     }
+    case "updateName": {
+      return { ...state, name: action.payload };
+    }
+    case "updateEmail": {
+      return { ...state, email: action.payload };
+    }
+    case "updatePhone": {
+      return { ...state, phone: action.payload };
+    }
+    case "mailError": {
+      return {
+        ...state,
+        mailError: action.payload,
+        areInputsValid: false,
+      };
+    }
+    case "phoneError": {
+      return {
+        ...state,
+        phoneError: action.payload,
+        areInputsValid: false,
+      };
+    }
+    case "nameError": {
+      return {
+        ...state,
+        nameError: action.payload,
+        areInputsValid: false,
+      };
+    }
+    case "resetError": {
+      return {
+        ...state,
+        nameError: "",
+        mailError: "",
+        phoneError: "",
+        areInputsValid: true,
+      };
+    }
   }
 };
 
@@ -120,9 +167,43 @@ const ContextProvider = ({ children }) => {
       billing,
       addOns,
       totalPrice,
+      name,
+      email,
+      phone,
+      areInputsValid,
+      nameError,
+      mailError,
+      phoneError,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
+
+  const checkInputs = () => {
+    if (!name) {
+      dispatch({
+        type: "nameError",
+        payload: "This field is required.",
+      });
+      return false;
+    } else if (!validateEmail(email)) {
+      dispatch({
+        type: "mailError",
+        payload: "Please provide a valid e-mail address.",
+      });
+      return false;
+    } else if (!validatePhone(phone)) {
+      dispatch({
+        type: "phoneError",
+        payload: "Please provide a valid phone number",
+      });
+      return false;
+    } else {
+      dispatch({
+        type: "resetError",
+      });
+      return true;
+    }
+  };
 
   return (
     <Context.Provider
@@ -135,6 +216,14 @@ const ContextProvider = ({ children }) => {
         billing,
         addOns,
         totalPrice,
+        name,
+        email,
+        phone,
+        areInputsValid,
+        nameError,
+        mailError,
+        phoneError,
+        checkInputs,
         dispatch,
       }}
     >
