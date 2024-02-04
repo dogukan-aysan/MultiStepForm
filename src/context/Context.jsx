@@ -81,6 +81,9 @@ const initialState = {
   mailError: "",
   phoneError: "",
   nameError: "",
+  nameIsValid: false,
+  mailIsValid: false,
+  phoneIsValid: false,
 };
 
 const reducer = (state, action) => {
@@ -113,36 +116,37 @@ const reducer = (state, action) => {
       };
     }
     case "updateName": {
-      return { ...state, name: action.payload };
+      return {
+        ...state,
+        name: action.payload,
+        nameIsValid: action.payload === "" ? false : true,
+      };
     }
     case "updateEmail": {
-      return { ...state, email: action.payload };
+      return {
+        ...state,
+        email: action.payload,
+        mailIsValid:
+          action.payload === ""
+            ? false
+            : validateEmail(action.payload)
+            ? true
+            : false,
+      };
     }
     case "updatePhone": {
-      return { ...state, phone: action.payload };
-    }
-    case "mailError": {
       return {
         ...state,
-        mailError: action.payload,
-        areInputsValid: false,
+        phone: action.payload,
+        phoneIsValid:
+          action.payload === ""
+            ? false
+            : validatePhone(action.payload)
+            ? true
+            : false,
       };
     }
-    case "phoneError": {
-      return {
-        ...state,
-        phoneError: action.payload,
-        areInputsValid: false,
-      };
-    }
-    case "nameError": {
-      return {
-        ...state,
-        nameError: action.payload,
-        areInputsValid: false,
-      };
-    }
-    case "resetError": {
+    case "resetErrorMessages": {
       return {
         ...state,
         nameError: "",
@@ -151,6 +155,19 @@ const reducer = (state, action) => {
         areInputsValid: true,
       };
     }
+    case "updateErrorMessages":
+      return {
+        ...state,
+        nameError: state.nameIsValid ? "" : "This field is required",
+        mailError: state.mailIsValid
+          ? ""
+          : "Please provide a valid e-mail address",
+        phoneError: state.phoneIsValid
+          ? ""
+          : "Please provide a valid phone number",
+        areInputsValid:
+          state.nameIsValid && state.mailIsValid && state.phoneIsValid,
+      };
   }
 };
 
@@ -174,33 +191,19 @@ const ContextProvider = ({ children }) => {
       nameError,
       mailError,
       phoneError,
+      nameIsValid,
+      mailIsValid,
+      phoneIsValid,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
 
   const checkInputs = () => {
-    if (!name) {
-      dispatch({
-        type: "nameError",
-        payload: "This field is required.",
-      });
-      return false;
-    } else if (!validateEmail(email)) {
-      dispatch({
-        type: "mailError",
-        payload: "Please provide a valid e-mail address.",
-      });
-      return false;
-    } else if (!validatePhone(phone)) {
-      dispatch({
-        type: "phoneError",
-        payload: "Please provide a valid phone number",
-      });
+    if (!(nameIsValid && mailIsValid && phoneIsValid)) {
+      dispatch({ type: "updateErrorMessages" });
       return false;
     } else {
-      dispatch({
-        type: "resetError",
-      });
+      dispatch({ type: "resetErrorMessages" });
       return true;
     }
   };
