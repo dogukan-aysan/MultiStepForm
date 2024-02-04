@@ -11,13 +11,25 @@
   margin-left: auto;
 }
 
+.next-step:hover {
+  background-color: var(--color-next-btn-hover);
+}
+
 .confirm {
   background-color: var(--color-purplish);
   color: var(--color-magnolia);
+}
+
+.confirm:hover {
+  background-color: var(--color-confirm-btn-hover);
 }
 
 .go-back {
   background-color: var(--color-alabaster);
   color: var(--color-cool-gray);
   font-weight: var(--fweight-md);
+}
+
+.go-back:hover {
+  color: var(--color-back-btn-hover);
 }

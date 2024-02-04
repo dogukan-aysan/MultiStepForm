@@ -23,11 +23,14 @@
 :root {
   /* COLORS */
   --color-marine: hsl(213, 96%, 18%);
+  --color-next-btn-hover: hsl(213, 95%, 32%);
   --color-purplish: hsl(243, 100%, 62%);
+  --color-confirm-btn-hover: hsl(243, 64%, 41%);
   --color-pastel: hsl(228, 100%, 84%);
   --color-light: hsl(206, 94%, 87%);
   --color-strawberry: hsl(354, 84%, 57%);
   --color-cool-gray: hsl(231, 11%, 63%);
+  --color-back-btn-hover: hsl(233, 8%, 53%);
   --color-cool-gray-transparent: hsla(234, 19%, 78%, 0.767);
   --color-light-gray: hsla(229, 24%, 87%, 0.918);
   --color-light-gray-2: hsl(228, 24%, 96%);
