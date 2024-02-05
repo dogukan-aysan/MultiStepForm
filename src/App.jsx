@@ -3,6 +3,7 @@ import { useContext } from "react";
 
 import Content from "./components/content/Content";
 import Directions from "./components/directions/Directions";
+import DirectionsMobile from "./components/directions/DirectionsMobile";
 import Steps from "./components/steps/Steps";
 import ThankYouMessage from "./components/thankYou/ThankYouMessage";
 
@@ -13,7 +14,11 @@ function App() {
   return (
     <div className={styles.app}>
       <Steps />
-      <main>
+      <main
+        className={`${styles.main} ${
+          isCompleted ? styles["main--completed"] : null
+        }`}
+      >
         {isCompleted ? (
           <ThankYouMessage />
         ) : (
@@ -23,6 +28,7 @@ function App() {
           </>
         )}
       </main>
+      {!isCompleted && <DirectionsMobile />}
     </div>
   );
 }

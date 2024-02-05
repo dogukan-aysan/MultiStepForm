@@ -8,3 +8,29 @@
   flex-direction: column;
   gap: var(--spacing-sm);
 }
+
+@media (max-width: 900px) {
+  .steps {
+    flex-basis: 25rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .steps {
+    flex-basis: 21rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .steps {
+    flex-direction: row;
+    flex-basis: 18rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    padding-top: calc(var(--spacing-regular) * 0.7);
+    border-radius: 0;
+    background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+  }
+}

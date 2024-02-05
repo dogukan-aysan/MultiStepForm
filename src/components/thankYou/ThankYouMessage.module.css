@@ -15,3 +15,16 @@
 .text {
   color: var(--color-cool-gray);
 }
+
+@media (max-width: 660px) {
+  .icon {
+    width: var(--spacing-regular);
+  }
+  .heading {
+    font-size: calc(var(--fsize-xlg) * 0.8);
+    margin-block: calc(var(--spacing-sm) * 0.5) calc(var(--spacing-tiny) * 1);
+  }
+  .text {
+    font-size: calc(var(--fsize-sm) * 1);
+  }
+}

@@ -2,3 +2,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+.directions-mobile {
+  display: none;
+}
+
+@media (max-width: 660px) {
+  .directions {
+    display: none;
+  }
+  .directions-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: calc(var(--spacing-tiny) * 1.5);
+  }
+}

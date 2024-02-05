@@ -40,3 +40,28 @@
   font-weight: var(--fweight-lg);
   letter-spacing: 1px;
 }
+
+@media (max-width: 900px) {
+  .num {
+    height: calc(var(--spacing-sm) * 0.8);
+    width: calc(var(--spacing-sm) * 0.8);
+  }
+  .heading {
+    font-size: calc(var(--fsize-tiny) * 1);
+  }
+  .title {
+    font-size: calc(var(--fsize-sm) * 0.8);
+  }
+}
+
+@media (max-width: 660px) {
+  .num {
+    height: calc(var(--spacing-sm) * 1.1);
+    width: calc(var(--spacing-sm) * 1.1);
+    font-size: calc(var(--fsize-sm) * 0.8);
+  }
+  .heading,
+  .title {
+    display: none;
+  }
+}

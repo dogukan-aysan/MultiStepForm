@@ -10,4 +10,14 @@
 .text {
   color: var(--color-cool-gray);
   font-size: var(--fsize-sm);
+  width: 93%;
+}
+
+@media (max-width: 900px) {
+  .heading {
+    font-size: calc(var(--fsize-xlg) * 0.8);
+  }
+  .text {
+    font-size: calc(var(--fsize-sm) * 0.9);
+  }
 }

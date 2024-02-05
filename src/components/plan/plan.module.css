@@ -21,3 +21,9 @@
 .selected {
   color: var(--color-marine);
 }
+
+@media (max-width: 660px) {
+  .options {
+    flex-direction: column;
+  }
+}
